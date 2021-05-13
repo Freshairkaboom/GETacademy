@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: system-ui;
+        }
+
+        div.page {
+            height: 100vh;
+            padding: solid 2px;
+
+            /*Declare grid*/
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            grid-template-rows: 1fr 10fr 1fr;
+            grid-template-areas: "menu header"
+                                 "menu mainContent"
+                                 "footer footer";
+        }
+
+        div.header {
+            background: rgb(15, 221, 221);
+            grid-area: header;
+            border: solid 2px;
+        }
+
+        div.menu {
+            background: rgb(220, 20, 60);
+            grid-area: menu;
+            border: solid 2px;
+        }
+
+        div.mainContent {
+            color: black;
+            background: rgb(255, 255, 255);
+            border: solid 2px;
+            grid-area: mainContent;
+        }
+
+        div.footer {
+            background: rgb(196, 21, 196);
+            grid-area: footer;
+            border: solid 2px;
+        }
+
+        #piglet {
+            max-width: 50vw;
+            max-height: 50vh;
+            float:left;
+            clear:left;
+        }
+
+        #text1 {
+            max-width: 50vw;
+            max-height: 50vh;
+            border: solid 2px;
+        }
+
+        @media only screen and (max-width: 100vh) {
+            div.page {
+
+            /*Declare grid*/
+            grid-template-columns: 100vh;
+            grid-template-rows: 10fr 20fr 50fr 20fr;
+            grid-template-areas: "header"
+                                 "menu"
+                                 "mainContent"
+                                 "footer";
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <h1 style="margin: 0px;">Piglet</h1>
+        </div>
+        <div class="menu">
+            <a>• Menu<br></a>
+            <a>• Piglet<br></a>
+            <a>• Duckling<br></a>
+        </div>
+        <div class="mainContent">
+            <img id="piglet" src="https://i.imgur.com/KkLGBRp.jpg" alt="Cute pig">
+            <p id=Text1>Hello I am piglet. I like grass.<br><br>
+                        Grass feels nice between my toes.<br><br>
+                        Mommy likes belly rubs.<br><br>
+                        Someday I'm going to be big and strong like mommy.<br><br>
+                        I hope there's no predators around.<br><br>
+                        Mommy says predators are scary.<br><br>
+                        But farmer is nice, farmer is not a predator.<br><br>
+                        He feeds me and mommy in winter.<br><br>
+                    </p>
+            <h1 style="color:brown">I love farmer.</h1>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+</body>
+</html>
