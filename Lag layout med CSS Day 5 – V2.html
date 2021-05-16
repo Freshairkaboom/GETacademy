@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: system-ui;
+        }
+
+        div.page {
+            height: 100vh;
+            padding: solid 2px;
+
+            /*Declare grid*/
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            grid-template-rows: 1fr 10fr 1fr;
+            grid-template-areas: "menu header"
+                                 "menu mainContent"
+                                 "footer footer";
+        }
+
+        div.header {
+            background: rgb(70, 138, 79);
+            grid-area: header;
+            border: solid 2px;
+            font-family: system-ui;
+        }
+
+        div.menu {
+            background: rgb(70, 138, 79);
+            grid-area: menu;
+            border: solid 2px;
+        }
+
+        div.mainContent {
+            color: black;
+            background: rgb(70, 138, 79);
+            border: solid 2px;
+            grid-area: mainContent;
+        }
+
+        div.footer {
+            background: rgb(70, 138, 79);
+            grid-area: footer;
+            border: solid 2px;
+        }
+
+        #piglet {
+            width: 100%;
+            height: auto;
+            object-fit: scale-down;
+            float:left;
+            clear:left;
+        }
+
+        @media only screen and (max-width: 600px) {
+            div.page {
+
+            /*Declare grid if window small*/
+                grid-template-columns: 100;
+                grid-template-rows: 0.2fr 1fr 1.4fr 20px;
+                grid-template-areas: "header"
+                                     "menu"
+                                     "mainContent"
+                                     "footer";
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <h1 style="margin: 0px; color: yellowgreen; object-fit: scale-down">Piglet</h1>
+        </div>
+        <div class="menu">
+            <a>• Menu<br></a>
+            <a href="Piglet.png">• Piglet<br></a>
+        </div>
+        <div class="mainContent">
+            <img id="piglet" src="Piglet.png" alt="Cute pig">
+
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+</body>
+</html>
