@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Quiz</h1>
+    <h2 style="text-align: center;">Spørsmål: Hvem er den nåværende statsministeren i Norge?</h2>
+    <h2 id="Stoltenberg" onclick="Stoltenbergfeil()">Jens Stoltenberg</h2>
+    <h2 id="Solberg" onclick="Solbergriktig()">Erna Solberg</h2>
+    <h2 id="Grande" onclick="Grandefeil()">Trine Skei Grande</h2>
+    <h2 id="Moxnes" onclick="Moxnesfeil()">Bjørnar Moxnes</h2>
+</body>
+<script>
+    function Solbergriktig() {
+        document.getElementById('Solberg').innerHTML = 'Riktig!'
+    }
+
+    function Stoltenbergfeil() {
+        document.getElementById('Stoltenberg').innerHTML = 'Feil!'
+    }
+
+    function Grandefeil() {
+        document.getElementById('Grande').innerHTML = 'Feil!'
+    }
+
+    function Moxnesfeil() {
+        document.getElementById('Moxnes').innerHTML = 'Feil!'
+    }
+</script>
+</html>
