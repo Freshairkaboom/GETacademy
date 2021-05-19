@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Quiz</h1>
+    <h2 style="text-align: center;">Spørsmål: Hvem er den nåværende statsministeren i Norge? (dobbelklikk svar)</h2>
+    <h2 id="Stoltenberg" ondblclick="Stoltenbergfeil()">Jens Stoltenberg</h2>
+    <h2 id="Solberg" ondblclick="Solbergriktig()">Erna Solberg</h2>
+    <h2 id="Grande" ondblclick="Grandefeil()">Trine Skei Grande</h2>
+    <h2 id="Moxnes" ondblclick="Moxnesfeil()">Bjørnar Moxnes</h2>
+
+    <h1 style="text-align: center;">Quiz</h1>
+    <h2 style="text-align: center;">Spørsmål: Hvem er den nåværende statsministeren i Norge? (Hold musen over svar)</h2>
+    <h2 id="Stoltenberg2" style="width: 200px;" onmouseover="Stoltenbergfeil2()">Jens Stoltenberg</h2>
+    <h2 id="Solberg2" style="width: 200px;" onmouseover="Solbergriktig2()">Erna Solberg</h2>
+    <h2 id="Grande2" style="width: 200px;" onmouseover="Grandefeil2()">Trine Skei Grande</h2>
+    <h2 id="Moxnes2" style="width: 200px;" onmouseover="Moxnesfeil2()">Bjørnar Moxnes</h2>
+
+    <h1 style="text-align: center;">Quiz</h1>
+    <h2 style="text-align: center;">Spørsmål: Hvem er den nåværende statsministeren i Norge? (Skriv noe i boksen for å vise svar))</h2>
+    <h2 id="Stoltenberg3" style="width: 200px;">Jens Stoltenberg</h2>
+    <h2 id="Solberg3" style="width: 200px;">Erna Solberg</h2>
+    <h2 id="Grande3" style="width: 200px;">Trine Skei Grande</h2>
+    <h2 id="Moxnes3" style="width: 200px;">Bjørnar Moxnes</h2>
+    <input type="text" id="input" onkeydown="Solbergriktig3">
+
+</body>
+<script>
+    function Solbergriktig() {
+        document.getElementById('Solberg').innerHTML = 'Riktig!'
+    }
+
+    function Stoltenbergfeil() {
+        document.getElementById('Stoltenberg').innerHTML = 'Feil!'
+    }
+
+    function Grandefeil() {
+        document.getElementById('Grande').innerHTML = 'Feil!'
+    }
+
+    function Moxnesfeil() {
+        document.getElementById('Moxnes').innerHTML = 'Feil!'
+    }
+    function Solbergriktig2() {
+        document.getElementById('Solberg2').innerHTML = 'Riktig!'
+    }
+
+    function Stoltenbergfeil2() {
+        document.getElementById('Stoltenberg2').innerHTML = 'Feil!'
+    }
+
+    function Grandefeil2() {
+        document.getElementById('Grande2').innerHTML = 'Feil!'
+    }
+
+    function Moxnesfeil2() {
+        document.getElementById('Moxnes2').innerHTML = 'Feil!'
+    }
+    function Solbergriktig3() {
+        document.getElementById('Solberg3').innerHTML = 'Riktig!'
+    }
+
+</script>
+</html>

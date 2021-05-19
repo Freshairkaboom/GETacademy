@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="testOnLoad()">
+    <h2 id="info" style="margin:50px;"></h2>
+    <img style="width:50vh;height:auto;" onclick="test()" src="https://www.openaccessgovernment.org/wp-content/uploads/2021/03/dreamstime_xxl_2584709-scaled.jpg"/>
+
+</body>
+<script>
+    function testOnLoad() {
+        document.getElementById('info').innerHTML += '<li>onload</li>';
+    }
+
+    function test() {
+        document.getElementById('info').innherHTML += '<li>ondblclick</li>';
+    }
+</script>
+</html>
