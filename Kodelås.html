@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodelås</title>
+    <style>
+        button {
+            width: 100%;
+            height:100%;
+            background-color:green;
+        }
+    </style>
+</head>
+<body>
+    <div class="page"></div>
+        <button class="button" id="1" onclick="log1()">1</div>
+        <button class="button" id="2" onclick="log2()">2</div>
+        <button class="button" id="3" onclick="log3()">3</div>
+        <button class="button" id="4" onclick="log4()">4</div>
+        <button class="button" id="5" onclick="log5()">5</div>
+        <button class="button" id="6" onclick="log6()">6</div>
+        <button class="button" id="7" onclick="log7()">7</div>
+        <button class="button" id="8" onclick="log8()">8</div>
+        <button class="button" id="9" onclick="log9()">9</div>
+        <button class="button" id="clear" onclick="clearall()">Clear all</div>
+
+        <div style="background-color:gray;" id="log"></div>
+</body>
+<script>
+    function log1() {
+        document.getElementById('log').innerHTML += "1"
+    }
+    function log2() {
+        document.getElementById('log').innerHTML += "2"
+    }
+    function log3() {
+        document.getElementById('log').innerHTML += "3"
+    }
+    function log4() {
+        document.getElementById('log').innerHTML += "4"
+    }
+    function log5() {
+        document.getElementById('log').innerHTML += "5"
+    }
+    function log6() {
+        document.getElementById('log').innerHTML += "6"
+    }
+    function log7() {
+        document.getElementById('log').innerHTML += "7"
+    }
+    function log8() {
+        document.getElementById('log').innerHTML += "8"
+    }
+    function log9() {
+        document.getElementById('log').innerHTML += "9"
+    }
+
+    function clearall() {
+        document.getElementById('log').innerHTML = ""
+    }
+
+</script>
+</html>
