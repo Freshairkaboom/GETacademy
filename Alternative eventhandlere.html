@@ -8,16 +8,30 @@
 </head>
 <body onload="testOnLoad()">
     <h2 id="info" style="margin:50px;"></h2>
-    <img style="width:50vh;height:auto;" onclick="test()" src="https://www.openaccessgovernment.org/wp-content/uploads/2021/03/dreamstime_xxl_2584709-scaled.jpg"/>
+    <button style="width:50vh;height:auto;" ondblclick="testOnDblClick()">Dobbelklikk på meg</button>
+    <div oncontextmenu="TestOnContextMenu()" contextmenu="TestContextMenu">Høyreklikk meg</div>
+    <input type="text" onkeydown="TestOnKeyDown()">
 
 </body>
 <script>
     function testOnLoad() {
+        console.log('onload')
         document.getElementById('info').innerHTML += '<li>onload</li>';
     }
 
-    function test() {
-        document.getElementById('info').innherHTML += '<li>ondblclick</li>';
+    function testOnDblClick() {
+        console.log('ondblclick')
+        document.getElementById('info').innerHTML += '<li>ondblclick</li>';
+    }
+
+    function TestOnContextMenu() {
+        console.log('oncontextmenu')
+        document.getElementById('info').innerHTML += '<li>oncontextmenu</li>';
+    }
+
+    function TestOnKeyDown() {
+        console.log('onkeydown')
+        document.getElementById('info').innerHTML += '<li>onkeydown</li>';
     }
 </script>
 </html>
