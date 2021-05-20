@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="Showdiv()">
+    <div id="div"></div>
+</body>
+<script>
+    var resultatdiv = document.getElementById('div');
+    var widthInput = 100 + Math.floor(Math.random() * 10);
+    var heightInput = 100 + Math.floor(Math.random() * 10);
+    var borderInput = 1 + Math.floor(Math.random() * 10);
+
+    function Showdiv() {
+        var width = widthInput;
+        var height = heightInput;
+        var border = borderInput;
+        var text = 'Width=' + width + 'px' + '<br>' + 'Height=' + height + 'px' + '<br>' + 'Border=' + border + 'px';
+        resultatdiv.innerHTML = '<div style="width:' + width + 'px;height:' + height + 'px;' + 'border:' + border + 'px solid black">' + text + '</div>'
+    }
+
+</script>
+</html>
