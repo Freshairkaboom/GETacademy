@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .selected {
+                content: "🡆";
+            }
+
+            .chk1 {
+                background-color: purple;
+                }
+                .chk2 {
+                    text-align: center;
+                }
+                .chk3 {
+                    border: 5px solid black;
+                }
+                .chk4 {
+                    color: royalblue;
+                }
+                .chk5 {
+                    padding: 5px;
+                }
+        </style>
+    </head>
+    <body>
+        <div id="1" onclick="velgDiv(this)">1</div>
+        <div id="2" onclick="velgDiv(this)">2</div>
+        <div id="3" onclick="velgDiv(this)">3</div>
+        <div id="4" onclick="velgDiv(this)">4</div>
+        <div id="5" onclick="velgDiv(this)">5</div>
+
+        <input id="chk1" type="checkbox" onchange="Velgcheckbox(this)" />
+        <input id="chk2" type="checkbox" onchange="Velgcheckbox(this)" />
+        <input id="chk3" type="checkbox" onchange="Velgcheckbox(this)" />
+        <input id="chk4" type="checkbox" onchange="Velgcheckbox(this)" />
+        <input id="chk5" type="checkbox" onchange="Velgcheckbox(this)" />
+        <script>
+
+            let Valgtelement = document.getElementById('1');
+                let chk1 = document.getElementById('chk1');
+                let chk2 = document.getElementById('chk2');
+                let chk3 = document.getElementById('chk3');
+                let chk4 = document.getElementById('chk4');
+                let chk5 = document.getElementById('chk5');
+
+            function VelgDiv(Valgt) {
+                Valgtelement.classList.remove('selected');
+                Valgtelement = Valgt;
+                Valgtelement.classList.add('selected');
+
+            chk1.checked = Valgtelement.classList.contains('chk1');
+            chk2.checked = Valgtelement.classList.contains('chk2');
+            chk3.checked = Valgtelement.classList.contains('chk3');
+            chk4.checked = Valgtelement.classList.contains('chk4');
+            chk5.checked = Valgtelement.classList.contains('chk5');
+
+            }
+
+            function Velgcheckbox(HuketAv) {
+                Valgtelement.classList.toggle(HuketAv.id);
+            }
+
+
+        </script>
+    </body>
+</html>
