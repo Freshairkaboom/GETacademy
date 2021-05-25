@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="test('onLoad')">
+    <div id="app"></div>
+
+</body>
+
+<script>
+    //Model
+    info = null;
+
+    //View
+    updateView();
+    function updateView(){
+        document.getElementById('app').innerHTML = `
+            <h2 id="info" style="margin:50px;">Hei</h2>
+            <button style="width:50vh;height:auto;" ondblclick="infoUpdate('onDblClick')">Dobbelklikk på meg</button>
+            <div oncontextmenu="infoUpdate('onContextMenu')" contextmenu="TestContextMenu">Høyreklikk meg</div>
+            <input type="text" onkeydown="infoUpdate('onKeyDown')"> `;
+    }
+
+    //Controller
+    function infoUpdate(textOutput) {
+        let info = document.getElementById('info').innerHTML;
+        info += '<li>'+ textOutput + '</li>';
+        updateView();
+    }
+</script>
+
+</html>

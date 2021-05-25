@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="test('onLoad')">
+    <h2 id="info" style="margin:50px;"></h2>
+    <button style="width:50vh;height:auto;" ondblclick="test('onDblClick')">Dobbelklikk på meg</button>
+    <div oncontextmenu="test('onContextMenu')" contextmenu="TestContextMenu">Høyreklikk meg</div>
+    <input type="text" onkeydown="test('onKeyDown')">
+
+</body>
+<script>
+    function test(e) {
+        document.getElementById('info').innerHTML += '<li>'+ e + '</li>';
+    }
+
+</script>
+</html>

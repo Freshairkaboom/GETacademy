@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      #info {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <style></style>
+  <body>
+    <div id="background" style="size: 100%"></div>
+    <div id="info">Hei dette er en div</div>
+    <select id="mySelect" onchange="info()">
+      <option value="Grey">Grey</option>
+      <option value="Black">Black</option>
+      <option value="Blue">Blue</option>
+      <option value="Green">Green</option>
+      <option selected value="Red">Red</option>
+    </select>
+    <script>
+      var infoDiv = document.getElementById("info");
+      let valgt = document.getElementById("mySelect");
+
+      info();
+
+      function info() {
+        let bakgrunn = document.getElementById("background");
+        let valgtVerdi = valgt.value;
+        if (valgtVerdi === "Grey" || valgtVerdi === "Black") bakgrunn.innerHTML += "Pink";
+        else bakgrunn.innerHTML += "black";
+        infoDiv.style.background = "valgtVerdi";
+        console.log(valgtVerdi  );
+      }
+    </script>
+  </body>
+</html>
