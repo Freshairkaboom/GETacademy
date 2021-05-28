@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #colorbox {
+            width: 20vh;
+            height: 20vh;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <select id="select" onchange="info(this.value)">
+        <option value="black">Black</option>
+        <option value="darkblue">Dark Blue</option>
+        <option value="lightgray">Light Gray</option>
+        <option value="lightgreen">Light Green</option>
+        <option value="lightred">Light Red</option>
+        </select> <br><br>
+
+        <div id="colorbox"></div>
+
+    <div id="app"></div>
+
+<script>
+    //Model
+    let appDiv = document.getElementById('app');
+    let colorbox = document.getElementById('colorbox');
+
+    //View
+    updateView();
+    function updateView() {
+        let html = `
+
+        `;
+        appDiv.innerHTML = html;
+    }
+    //Controller
+    function info(color) {
+        if (color == "black") colorbox.style.background=color;
+        if (color == "darkblue") colorbox.style.background=color;
+        if (color == "lightgray") colorbox.style.background=color;
+        if (color == "lightgreen") colorbox.style.background=color;
+        if (color == "lightred") colorbox.style.background=color;
+        updateView();
+    }
+</script>
+</body>
+</html>
